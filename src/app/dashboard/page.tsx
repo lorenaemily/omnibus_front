@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import React from "react";
 import {
   AreaChart,
   Area,
@@ -157,36 +156,39 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function DashboardPage() {
+  // TODO: substitua os caminhos abaixo pelas rotas reais do seu projeto
+  const navigate = (path: string) => { window.location.href = path; };
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
       {/* Navbar */}
       <header className="bg-white border-b border-gray-200 px-8 py-0 flex items-center justify-between h-14">
         <nav className="flex items-center gap-6">
-          {/* TODO: substitua os href abaixo pelos links reais das páginas */}
-          <Link
-            href="/dashboard"
+          <button
+            onClick={() => navigate("/dashboard")}
             className="text-sm font-semibold uppercase tracking-widest py-4 border-b-2 transition-colors border-[#F1BB13] text-[#1C274C]"
           >
             Dashboard
-          </Link>
-          <Link
-            href="/financeiro"
+          </button>
+          <button
+            onClick={() => navigate("/financeiro")}
             className="text-sm font-semibold uppercase tracking-widest py-4 border-b-2 transition-colors border-transparent text-gray-400 hover:text-gray-600"
           >
             Financeiro
-          </Link>
+          </button>
         </nav>
         <div className="flex items-center gap-4" style={{ color: "#1C274C" }}>
-          {/* TODO: substitua o href pelo link de notificações */}
-          <Link href="/notificacoes" className="relative transition-colors hover:opacity-70">
+          <button onClick={() => navigate("/notificacoes")} className="relative transition-colors hover:opacity-70">
             <BellIcon />
             <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full" style={{ backgroundColor: "#F1BB13" }} />
-          </Link>
-          {/* TODO: substitua o href pelo link do perfil */}
-          <Link href="/perfil" className="w-8 h-8 rounded-full text-white flex items-center justify-center transition-colors hover:opacity-80" style={{ backgroundColor: "#1C274C" }}>
+          </button>
+          <button
+            onClick={() => navigate("/perfil")}
+            className="w-8 h-8 rounded-full text-white flex items-center justify-center transition-colors hover:opacity-80"
+            style={{ backgroundColor: "#1C274C" }}
+          >
             <UserIcon />
-          </Link>
+          </button>
         </div>
       </header>
 
@@ -247,18 +249,13 @@ export default function DashboardPage() {
               {financialMetrics.map((m) => (
                 <MetricCard key={m.label} {...m} />
               ))}
-              {/* TODO: substitua o href pelo link da tela de cadastro de gastos */}
-              <Link
-                href="/gastos/cadastrar"
-                className="w-full active:scale-95 transition-all font-bold uppercase tracking-widest text-sm py-3 shadow-md text-center block"
-                style={{
-                  backgroundColor: "#F1BB13",
-                  color: "#ffffff",
-                  borderRadius: 5,
-                }}
+              <button
+                onClick={() => navigate("/gastos/cadastrar")}
+                className="w-full active:scale-95 transition-all font-bold uppercase tracking-widest text-sm py-3 shadow-md"
+                style={{ backgroundColor: "#F1BB13", color: "#ffffff", borderRadius: 5 }}
               >
                 Cadastrar Gastos
-              </Link>
+              </button>
             </div>
           </div>
         </section>
