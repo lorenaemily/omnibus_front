@@ -178,12 +178,12 @@ export default function DashboardPage() {
           </button>
         </nav>
         <div className="flex items-center gap-4" style={{ color: "#1C274C" }}>
-          <button onClick={() => navigate("/notificacoes")} className="relative transition-colors hover:opacity-70">
+          <button onClick={() => navigate("/notifications")} className="relative transition-colors hover:opacity-70">
             <BellIcon />
             <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full" style={{ backgroundColor: "#F1BB13" }} />
           </button>
           <button
-            onClick={() => navigate("/perfil")}
+            onClick={() => navigate("/infor_instituicao")}
             className="w-8 h-8 rounded-full text-white flex items-center justify-center transition-colors hover:opacity-80"
             style={{ backgroundColor: "#1C274C" }}
           >
