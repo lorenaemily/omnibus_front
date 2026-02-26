@@ -82,7 +82,7 @@ export default function OnibusCadastradosPage() {
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <button className="btn-cadastrar" onClick={() => router.push("/onibus/cadastrar")}>
+          <button className="btn-cadastrar" onClick={() => router.push("/cadastro_onibus")}>
             CADASTRAR ÔNIBUS
           </button>
         </div>
