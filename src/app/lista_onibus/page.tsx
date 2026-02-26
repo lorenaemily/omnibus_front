@@ -39,7 +39,6 @@ const css = `
   .oc-notif-wrap { position: relative; display: flex; align-items: center; justify-content: center; }
   .oc-notif-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; color: #01233F; transition: opacity 0.15s; }
   .oc-notif-btn:hover { opacity: 0.7; }
-  .oc-notif-dot { position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; border-radius: 50%; background: #f1bb13; }
   .oc-user-btn { background: #01233F; width: 36px; height: 36px; border: 2px solid #01233F; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: opacity 0.15s; padding: 0; color: #fff; }
   .oc-user-btn:hover { opacity: 0.8; }
   .oc-main { padding: 32px 40px; }
@@ -128,7 +127,6 @@ export default function OnibusCadastradosPage() {
                   <path d="M13.73 21a2 2 0 0 1-3.46 0" />
                 </svg>
               </button>
-              <span className="oc-notif-dot" />
             </div>
             <button className="oc-user-btn" title="Usuário" onClick={() => router.push("/perfil")}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
