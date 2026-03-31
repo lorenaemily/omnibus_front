@@ -74,7 +74,7 @@ const quickActions = [
     id: "school",
     label: "Nova Escola",
     description: "Adicionar instituição",
-    route: "/cadastrar_escola",
+    route: "/cadastro_escola",
     icon: "school",
     accent: "#22c55e",
   },
@@ -165,7 +165,7 @@ function FinanceIcon() {
   );
 }
 
-const ICON_MAP: Record<string, (p: any) => JSX.Element> = {
+const ICON_MAP: Record<string, (p: any) => React.JSX.Element> = {
   bus: BusIcon, route: RouteIcon, driver: DriverIcon, school: SchoolIcon,
 };
 
